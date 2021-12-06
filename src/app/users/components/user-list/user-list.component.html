@@ -1,0 +1,25 @@
+<div class="container pt-3">
+  <div class="row">
+    <div class="col-12">
+      <app-user-filter></app-user-filter>
+      <hr>
+      <table>
+        <thead>
+        <tr>
+          <th>id</th>
+          <th>email</th>
+          <th>status</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let user of userService.users$ | async">
+          <td>{{user.id}}</td>
+          <td>{{user.email}}</td>
+          <td>{{user.status}}</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
